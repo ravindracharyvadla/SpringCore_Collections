@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="account1" class="com.companyname.model.Account">
+<!-- <property name="accountNumber" value="123456789"></property>
+<property name="accountHolderName" value="Ravindra"></property> -->
+</bean>
+
+<bean id="account2" class="com.companyname.model.Account">
+<!-- <property name="accountNumber" value="213456789"></property>
+<property name="accountHolderName" value="Ravindra"></property> -->
+</bean>
+
+<bean id="account3" class="com.companyname.model.Account">
+<!-- <property name="accountNumber" value="321456789"></property>
+<property name="accountHolderName" value="Ravindra"></property> -->
+</bean>
+
+<bean id="employee" class="com.companyname.model.Employee">
+<!-- <property name="employeeId" value="112"></property>
+<property name="employeeName" value="Ravindra"></property>
+<property name="emailId" value="ravi@gmail.com"></property>
+<property name="contactNumber" value="9876543210"></property> -->
+<property name="account">
+	<list>
+		<ref bean="account1"/>
+		<ref bean="account2"/>
+		<ref bean="account3"/>
+	</list>
+</property>
+</bean>
+   
+</beans>
